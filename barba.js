@@ -44,7 +44,7 @@ function secondarypageout() {
 function pageTransition() {
     let tl = gsap.timeline();
     tl.to('ul.transition li', { duration: .6, scaleY: 1, transformOrigin: "bottom left", stagger: .2 });
-    tl.to('ul.transition li', { duration: 1.2, width: "100%", left: "100%", ease: "Expo.easeInOut", delay: 0.3 });
+    tl.to('ul.transition li', { duration: .01, width: "100%", left: "100%", ease: "Expo.easeInOut", /*delay: 0.3*/ });
     tl.to('ul.transition li', { duration: .6, scaleY: 0, transformOrigin: "bottom left", stagger: .1, delay: .1, });
 }
 
