@@ -37,8 +37,8 @@ function pageout() {
 
 function secondarypageout() {
     let tl = gsap.timeline();
-    tl.to('#logo2, #back', { duration: .9, translateY: -50, opacity: 0 });
-    tl.from('.text-part-img', { duration: .9, opacity: 0 });
+    tl.to('#logo2, #back, .text-part-img', { duration: .9, translateY: -50, opacity: 0 });
+    tl.to('.contenedor-imagen-completa', { duration: .9, opacity: 0, delay: -.45});
 }
 
 function pageTransition() {
@@ -51,8 +51,8 @@ function pageTransition() {
 function secondaryAnimation() {
     let tl = gsap.timeline();
     tl.from('#logo2, #back', { duration: .9, translateY: -50, opacity: 0 });
-    tl.from('.text-part-img', { duration: 1.5, translateY: 50, opacity: 0 });
-    tl.to('.contenedor-imagen-completa', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100% )" }, "-=1.1");
+    tl.from('.text-part-img', { duration: .9, translateY: 50, opacity: 0 });
+    tl.from('.contenedor-imagen-completa', { duration: .9, opacity: 0 });
 }
 
 function contentAnimation() {
