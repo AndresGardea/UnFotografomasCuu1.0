@@ -17,6 +17,10 @@ barba.hooks.after((data) => {
     scroll.init();
 });
 
+barba.hooks.beforeEnter(() => {
+	window.scrollTo(0, 0);
+});
+
 barba.hooks.enter(() => {
     NavSlide();
     BtnAnim();
@@ -25,6 +29,13 @@ barba.hooks.enter(() => {
 
 
 /*Animaciones*/
+
+function pageTransition() {
+    let tl = gsap.timeline();
+    tl.to('ul.transition li', { duration: .6, scaleY: 1, transformOrigin: "bottom left", stagger: .2 });
+    tl.to('ul.transition li', { duration: .01, width: "100%", left: "100%", ease: "Expo.easeInOut", /*delay: 0.3*/ });
+    tl.to('ul.transition li', { duration: .6, scaleY: 0, transformOrigin: "bottom left", stagger: .1, delay: .1, });
+}
 
 function pageout() {
     let tl = gsap.timeline();
@@ -35,26 +46,6 @@ function pageout() {
     tl.to(".NavBar", { duration: .9, translateY: -800, opacity: 0, delay: -1 });
 }
 
-function secondarypageout() {
-    let tl = gsap.timeline();
-    tl.to('#logo2, #back, .text-part-img', { duration: .9, translateY: -50, opacity: 0 });
-    tl.to('.contenedor-imagen-completa', { duration: .9, opacity: 0, delay: -.45});
-}
-
-function pageTransition() {
-    let tl = gsap.timeline();
-    tl.to('ul.transition li', { duration: .6, scaleY: 1, transformOrigin: "bottom left", stagger: .2 });
-    tl.to('ul.transition li', { duration: .01, width: "100%", left: "100%", ease: "Expo.easeInOut", /*delay: 0.3*/ });
-    tl.to('ul.transition li', { duration: .6, scaleY: 0, transformOrigin: "bottom left", stagger: .1, delay: .1, });
-}
-
-function secondaryAnimation() {
-    let tl = gsap.timeline();
-    tl.from('#logo2, #back', { duration: .9, translateY: -50, opacity: 0 });
-    tl.from('.text-part-img', { duration: .9, translateY: 50, opacity: 0 });
-    tl.from('.contenedor-imagen-completa', { duration: .9, opacity: 0 });
-}
-
 function contentAnimation() {
     var tl = gsap.timeline();
     tl.from('#txt-parallax-1', { duration: .9, translateY: 50, opacity: 0, delay: .1 });
@@ -62,8 +53,21 @@ function contentAnimation() {
     tl.from('.nav-links-close', { duration: .9, translateY: -50, opacity: 0, delay: -1 });
     tl.from('#switch', { duration: .9, translateX: 100, opacity: 0, delay: -1 });
     tl.from(".logo", { duration: .9, translateY: -50, opacity: 0, delay: -1 });
-
 }
+
+function secondaryAnimation() {
+    let tl = gsap.timeline();
+    tl.from('#logo-2, #back', { duration: .9, translateY: -50, opacity: 0 });
+    tl.from('.text-part-img', { duration: .9, translateY: 50, opacity: 0 });
+    tl.from('.imagen-completa', { duration: .9, opacity: 0, delay: -.8});
+}
+
+function secondarypageout() {
+    let tl = gsap.timeline();
+    tl.to('#logo-2, #back, .text-part-img', { duration: .9, translateY: -50, opacity: 0 });
+    tl.to('.imagen-completa', { duration: .9, opacity: 0, delay: -.9});
+}
+
 
 $(function () {
     barba.init({
