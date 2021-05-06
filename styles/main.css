@@ -1536,6 +1536,11 @@ footer h1 {
     grid-template-rows: 6rem 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
+.texto-pagina-imagen p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .imagen-completa {
     grid-column: 2/2;
     background: var(--background-1);
@@ -1745,11 +1750,6 @@ footer h1 {
         margin-top: 4rem;
         display: block;
         padding: 1rem;
-    }
-    
-    .texto-pagina-imagen p{
-        text-align: justify;
-        text-justify: inter-word;
     }
 
     .imagen-completa {
