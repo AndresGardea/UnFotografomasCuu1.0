@@ -58,17 +58,17 @@ function contentAnimation() {
 function secondaryAnimation() {
     let tl = gsap.timeline();
     tl.from('#logo-2, #back', { duration: .9, translateY: -50, opacity: 0 });
-    tl.from('.anim-gallery', { duration: 1.3, translateY: 50, opacity: 0, stagger: 0.2 });
-    tl.from('.imagen-completa', { duration: .9, opacity: 0, delay: -2.2});
+    tl.from('.NavBar-2', { duration: .9, translateY: -50, opacity: 0, delay: -.9 });
+    tl.from('.anim-gallery', { duration: 1.1, translateY: 50, opacity: 0, stagger: 0.2 });
+    tl.from('.imagen-completa', { duration: 1, opacity: 0, delay: -.7});
 }
 
 function secondarypageout() {
     let tl = gsap.timeline();
     tl.to('#logo-2, #back', { duration: .9, translateY: -50, opacity: 0});
-    tl.to('.NavBar-2', { duration: .9, translateY: -50, opacity: 0, delay: -.9 });
-    tl.to('.anim-gallery', { duration: 1.3, translateY: 50, opacity: 0, stagger: 0.2, delay: -1.7 });
-    tl.to('.anim-btn', { duration: .9, translateY: 50, opacity: 0, delay: -3.2 });
-    tl.to('.imagen-completa', { duration: .9, opacity: 0, delay: -4.1});
+    tl.to('.NavBar-2', { duration: .9, translateY: -50, opacity: 0, delay: -.85 });
+    tl.to('.anim-gallery', { duration: 1, translateY: 50, opacity: 0, stagger: 0.2, delay: -.8 });
+    tl.to('.imagen-completa', { duration: .9, opacity: 0, delay: -1.4 });
 }
 
 
