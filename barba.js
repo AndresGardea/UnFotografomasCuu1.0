@@ -47,6 +47,7 @@ function pageTransition() {
     tl.to('.loading-bar', {  duration: .8, scaleX: 1, transformOrigin: "left"});
     tl.to('.load-anim', { duration: .9, opacity: 0});
     tl.to('ul.transition li', { duration: .6, scaleY: 0, transformOrigin: "bottom left", stagger: .1, delay: .1, });
+    tl.to('.loading-bar', {  duration: 0, scaleX: 0, transformOrigin: "left"});
 }
 
 function principalAnimation() {
