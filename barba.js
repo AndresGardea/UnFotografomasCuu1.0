@@ -30,11 +30,39 @@ barba.hooks.enter(() => {
 
 /*Animaciones*/
 
+function firsVisit() {
+    let tl = gsap.timeline();
+    tl.to('ul.transition li', { duration: 0, scaleY: 1, transformOrigin: "bottom left"});
+    tl.to('.load-anim', { duration: .9 ,opacity: 1});
+    tl.to('.loading-bar', {  duration: 1, scaleX: 1, transformOrigin: "left"});
+    tl.to('.load-anim', { duration: .9, opacity: 0});
+    tl.to('ul.transition li', { duration: .6, scaleY: 0, transformOrigin: "bottom left", stagger: .1, delay: .1, });
+    tl.to('.loading-bar', {  duration: 0, scaleX: 0, transformOrigin: "left"});
+}
+
 function pageTransition() {
     let tl = gsap.timeline();
     tl.to('ul.transition li', { duration: .6, scaleY: 1, transformOrigin: "bottom left", stagger: .2 });
-    tl.to('ul.transition li', { duration: .01, width: "100%", left: "100%", ease: "Expo.easeInOut", /*delay: 0.3*/ });
+    tl.to('.load-anim', { duration: .9 ,opacity: 1});
+    tl.to('.loading-bar', {  duration: .8, scaleX: 1, transformOrigin: "left"});
+    tl.to('.load-anim', { duration: .9, opacity: 0});
     tl.to('ul.transition li', { duration: .6, scaleY: 0, transformOrigin: "bottom left", stagger: .1, delay: .1, });
+}
+
+function principalAnimation() {
+    var tl = gsap.timeline();
+    tl.from('.anim-nav', { duration: .9, translateY: -50, opacity: 0, stagger: .1, delay: 2.9 });
+    tl.from('.switch', { duration: .9, translateX: 100, opacity: 0, delay: -.1});
+    tl.to('#txt-parallax-1', { duration: .9, translateY: -50, opacity: 1, delay: -.6 });
+    tl.to('#txt-parallax-2', { duration: .9, translateY: -60, opacity: 1, delay: -.5 });
+}
+
+function secondaryAnimation() {
+    let tl = gsap.timeline();
+    tl.from('#logo-2, #back', { duration: .9, translateY: -50, opacity: 0, delay: 2.9});
+    tl.from('.NavBar-2', { duration: .9, translateY: -50, opacity: 0, delay: -.9 });
+    tl.from('.anim-gallery', { duration: 1.1, translateY: 50, opacity: 0, stagger: 0.2 });
+    tl.from('.imagen-completa', { duration: 1, opacity: 0, delay: -.7});
 }
 
 function pageout() {
@@ -44,23 +72,6 @@ function pageout() {
     tl.to('#switch', { duration: .9, translateX: 100, opacity: 0, delay: -1 });
     tl.to(".logo", { duration: .9, translateY: -50, opacity: 0, delay: -1 });
     tl.to(".NavBar", { duration: .9, translateY: -800, opacity: 0, delay: -1 });
-}
-
-function contentAnimation() {
-    var tl = gsap.timeline();
-    tl.from('#txt-parallax-1', { duration: .9, translateY: 50, opacity: 0, delay: .1 });
-    tl.from('#txt-parallax-2', { duration: .9, translateY: 70, opacity: 0, delay: -.9 });
-    tl.from('.nav-links-close', { duration: .9, translateY: -50, opacity: 0, delay: -1 });
-    tl.from('#switch', { duration: .9, translateX: 100, opacity: 0, delay: -1 });
-    tl.from(".logo", { duration: .9, translateY: -50, opacity: 0, delay: -1 });
-}
-
-function secondaryAnimation() {
-    let tl = gsap.timeline();
-    tl.from('#logo-2, #back', { duration: .9, translateY: -50, opacity: 0 });
-    tl.from('.NavBar-2', { duration: .9, translateY: -50, opacity: 0, delay: -.9 });
-    tl.from('.anim-gallery', { duration: 1.1, translateY: 50, opacity: 0, stagger: 0.2 });
-    tl.from('.imagen-completa', { duration: 1, opacity: 0, delay: -.7});
 }
 
 function secondarypageout() {
@@ -98,12 +109,13 @@ $(function () {
             },
 
             async enter(data) {
-                contentAnimation();
+                principalAnimation();
                 secondaryAnimation();
             },
 
             async once(data) {
-                contentAnimation();
+                firsVisit();
+                principalAnimation();
                 secondaryAnimation();
             }
         }]
