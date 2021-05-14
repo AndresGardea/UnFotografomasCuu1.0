@@ -1393,7 +1393,7 @@ footer {
     width: 100%;
     background: var(--background-1);
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     color: var(--text-2);
 }
 
