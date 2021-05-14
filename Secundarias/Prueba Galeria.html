@@ -32,7 +32,14 @@
     <ul class="transition">
         <li></li>
         <li></li>
-        <li></li>
+        <li id="central">
+            <div class="loader">
+                <div class="load-anim">
+                    <h1>Cargando</h1>
+                    <div class="loading-bar"></div>
+                </div>
+            </div>
+        </li>
         <li></li>
         <li></li>
     </ul>
@@ -51,10 +58,12 @@
                 <div class="texto-pagina-imagen">
                     <div class="text-part-img">
                         <h2 class="anim-gallery">Preba de las Galeria GSAP+BarbaJS</h2><br>
-                        <p class="anim-gallery">En esta pagina lo que quiero hacer es mostrar las imagenes en mayor calidad de la parte de
+                        <p class="anim-gallery">En esta pagina lo que quiero hacer es mostrar las imagenes en mayor
+                            calidad de la parte de
                             Sesiones de la pagina principal, ademas de en algunos casos el agregar informadio
                             relacionada con la foto.</p><br>
-                        <p class="anim-gallery">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure aspernatur sequi,
+                        <p class="anim-gallery">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
+                            aspernatur sequi,
                             necessitatibus et repellendus quisquam ex assumenda modi tempore architecto quam, saepe
                             voluptates ducimus vero ipsa quo eveniet quae deleniti? Ipsum iste quod tenetur earum
                             quibusdam illo non id velit numquam nostrum tempora totam, minus animi nulla necessitatibus
@@ -63,7 +72,8 @@
                             doloribus id voluptates quos dolores cum consectetur! Ea, quaerat nesciunt. Laborum, magni
                             animi beatae sequi doloremque facere eveniet dicta cupiditate ut commodi totam, ullam
                             expedita possimus id quae!</p><br>
-                        <p class="anim-gallery">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, nobis molestias!
+                        <p class="anim-gallery">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, nobis
+                            molestias!
                             Reprehenderit porro labore veniam eligendi nesciunt, aut mollitia error ab qui cupiditate
                             ullam perspiciatis iste, dicta earum impedit repellat dignissimos? Voluptas illo maxime esse
                             porro ex harum soluta rerum rem expedita molestiae enim reiciendis quod eligendi hic quas,
@@ -76,15 +86,16 @@
                             repudiandae ut saepe cum, nulla, nihil animi reiciendis doloremque nemo architecto. Debitis
                             architecto laborum obcaecati commodi quaerat eius non similique doloribus nesciunt, dolorum
                             quas, tempore delectus, expedita placeat!</p><br>
-                        <p class="anim-gallery">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ducimus possimus dolor
+                        <p class="anim-gallery">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                            ducimus possimus dolor
                             cumque? Distinctio sunt perferendis non. Rerum tempora similique facere enim sit dolorum
                             temporibus, molestiae eligendi obcaecati cumque dolores nobis tenetur, vel labore quia
                             aliquam ad quasi ullam fugit sunt magnam! Et itaque sed magni, recusandae magnam inventore
                             soluta.</p><br>
-                        <div class="footer-btn from-left-footer anim-btn"><a class="fab fa-google-drive"
+                        <div class="gallery-btn from-left-footer"><a class="fab fa-google-drive anim-btn"
                                 href="https://drive.google.com/drive/folders/17Upno49Bbr61Yz7B_ZA55s1FS7aL5PTa?usp=sharing"
                                 target="_blank"></a>
-                            <h4>Todas las fotos en resolucion completa</h4>
+                            <h4 class="anim-btn">Todas las fotos en resolucion completa</h4>
                         </div>
                     </div>
                 </div>
@@ -92,7 +103,8 @@
                 <div class="imagen-completa">
                     <div class="imagen-galeria size-2">
                         <div class="img-galeria">
-                            <img loading="lazy" src="../Multimedia/Comprimidas (1280px)/009.webp" />
+                            <img class="img-g" id="img1" loading="lazy"
+                                src="../Multimedia/Comprimidas (1280px)/009.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -103,7 +115,8 @@
                                     Distancia Focal: 240mm<br>
                                     Dimensiones: 6000x4000<br>
                                 </p>
-                                <div class="img-btn">
+                                <div class="img-btn" id="btn1" src="../Multimedia/Comprimidas (1280px)/009.webp"
+                                    alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, animi.">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
@@ -111,7 +124,8 @@
                     </div>
                     <div class="imagen-galeria size-2">
                         <div class="img-galeria">
-                            <img class="img-g" loading="lazy" src="../Multimedia/Comprimidas (1280px)/010.webp" />
+                            <img class="img-g" id="img2" loading="lazy"
+                                src="../Multimedia/Comprimidas (1280px)/010.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -122,7 +136,8 @@
                                     Distancia Focal: 240mm<br>
                                     Dimensiones: 6000x4000<br>
                                 </p>
-                                <div class="img-btn">
+                                <div class="img-btn" id="btn2" src="../Multimedia/Comprimidas (1280px)/010.webp"
+                                    alt="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis eveniet nostrum eum?">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
@@ -130,7 +145,8 @@
                     </div>
                     <div class="imagen-galeria size-1">
                         <div class="img-galeria">
-                            <img loading="lazy" src="../Multimedia/Comprimidas (1280px)/013.webp" />
+                            <img class="img-g" id="img3" loading="lazy"
+                                src="../Multimedia/Comprimidas (1280px)/013.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -141,7 +157,8 @@
                                     Distancia Focal: 240mm<br>
                                     Dimensiones: 6000x4000<br>
                                 </p>
-                                <div class="img-btn">
+                                <div class="img-btn" id="btn3" src="../Multimedia/Comprimidas/013.webp"
+                                    alt="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum culpa dignissimos expedita distinctio fuga consectetur ad sequi, officiis fugiat adipisci!">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
@@ -149,7 +166,8 @@
                     </div>
                     <div class="imagen-galeria size-3">
                         <div class="img-galeria">
-                            <img loading="lazy" src="../Multimedia/Comprimidas (1280px)/015.webp" />
+                            <img class="img-g" id="img4" loading="lazy"
+                                src="../Multimedia/Comprimidas (1280px)/015.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -160,7 +178,8 @@
                                     Distancia Focal: 240mm<br>
                                     Dimensiones: 6000x4000<br>
                                 </p>
-                                <div class="img-btn">
+                                <div class="img-btn" id="btn4" src="../Multimedia/Comprimidas (1280px)/015.webp"
+                                    alt="Lorem ipsum dolor sit, amet consectetur adipisicing elit.">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
@@ -168,7 +187,8 @@
                     </div>
                     <div class="imagen-galeria size-3">
                         <div class="img-galeria">
-                            <img loading="lazy" src="../Multimedia/Comprimidas (1280px)/011.webp" />
+                            <img class="img-g" id="img5" loading="lazy"
+                                src="../Multimedia/Comprimidas (1280px)/011.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -179,7 +199,8 @@
                                     Distancia Focal: 240mm<br>
                                     Dimensiones: 6000x4000<br>
                                 </p>
-                                <div class="img-btn">
+                                <div class="img-btn" id="btn5" src="../Multimedia/Comprimidas (1280px)/011.webp"
+                                    alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus omnis ipsum expedita natus ratione autem, exercitationem adipisci iste consequatur earum corrupti libero.">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
@@ -187,7 +208,8 @@
                     </div>
                     <div class="imagen-galeria size-3">
                         <div class="img-galeria">
-                            <img loading="lazy" src="../Multimedia/Comprimidas (1280px)/012.webp" />
+                            <img class="img-g" id="btn6" loading="lazy"
+                                src="../Multimedia/Comprimidas (1280px)/012.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -198,10 +220,20 @@
                                     Distancia Focal: 240mm<br>
                                     Dimensiones: 6000x4000<br>
                                 </p>
-                                <div class="img-btn">
+                                <div class="img-btn" id="btn6" src="../Multimedia/Comprimidas (1280px)/012.webp"
+                                    alt="Lorem ipsum dolor sit, amet consectetur adipisicing elit.">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="lightbox">
+                        <div class="img-show">
+                            <img class="img-lightbox" src="" alt="">
+                        </div>
+                        <p class="copy"></p>
+                        <div class="close-btn">
+                            <h1 class="close">+</h1>
                         </div>
                     </div>
                 </div>
@@ -220,7 +252,7 @@
 <script src="../barba.js"></script>
 <script src="../Scripts/btn.min.js"></script>
 <script src="../Scripts/dark.min.js"></script>
+<script src="../Scripts/lightbox.js"></script>
 <script src="../Scripts/nav.min.js"></script>
-<script src="../Scripts/gallery.js"></script>
 
 </html>

@@ -32,7 +32,14 @@
     <ul class="transition">
         <li></li>
         <li></li>
-        <li></li>
+        <li id="central">
+            <div class="loader">
+                <div class="load-anim">
+                    <h1>Cargando</h1>
+                    <div class="loading-bar"></div>
+                </div>
+            </div>
+        </li>
         <li></li>
         <li></li>
     </ul>
@@ -58,7 +65,7 @@
                             temporibus, molestiae eligendi obcaecati cumque dolores nobis tenetur, vel labore quia
                             aliquam ad quasi ullam fugit sunt magnam! Et itaque sed magni, recusandae magnam inventore
                             soluta.</p><br>
-                        <div class="footer-btn from-left-footer anim-btn"><a class="fab fa-google-drive"
+                        <div class="gallery-btn from-left-footer anim-btn"><a class="fab fa-google-drive"
                                 href="https://drive.google.com/drive/folders/17Upno49Bbr61Yz7B_ZA55s1FS7aL5PTa?usp=sharing"
                                 target="_blank"></a>
                             <h4>Todas las fotos en resolucion completa</h4>
@@ -69,7 +76,8 @@
                 <div class="imagen-completa">
                     <div class="imagen-galeria size-0">
                         <div class="img-galeria">
-                            <img class="img-g" loading="lazy" src="../Multimedia/Comprimidas/010.webp" />
+                            <img class="img-g" id="img3" loading="lazy"
+                                src="../Multimedia/Comprimidas (1280px)/013.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -80,10 +88,20 @@
                                     Distancia Focal: 240mm<br>
                                     Dimensiones: 6000x4000<br>
                                 </p>
-                                <div class="img-btn">
+                                <div class="img-btn" id="btn3" src="../Multimedia/Comprimidas/013.webp"
+                                    alt="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum culpa dignissimos expedita distinctio fuga consectetur ad sequi, officiis fugiat adipisci!">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="lightbox">
+                        <div class="img-show">
+                            <img class="img-lightbox" src="" alt="">
+                        </div>
+                        <p class="copy"></p>
+                        <div class="close-btn">
+                            <h1 class="close">+</h1>
                         </div>
                     </div>
                 </div>
@@ -101,6 +119,7 @@
 <script src="../index.js"></script>
 <script src="../barba.js"></script>
 <script src="../Scripts/btn.min.js"></script>
+<script src="../Scripts/lightbox.js"></script>
 <script src="../Scripts/dark.min.js"></script>
 <script src="../Scripts/nav.min.js"></script>
 
