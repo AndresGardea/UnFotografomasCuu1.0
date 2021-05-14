@@ -1,4 +1,4 @@
-function Lightbox() {
+const Lightbox = () => {
     const zoombtn = document.querySelectorAll('.img-btn');
     const closebtn = document.querySelectorAll('.close');
     const containerLightbox = document.querySelector('.lightbox');
@@ -23,14 +23,14 @@ function Lightbox() {
         })
     })
 
+
     const addImage = (srcImage, altImage) => {
 
         imgLightbox.src = srcImage;
         copy.innerHTML = altImage;
     }
+
 }
-
-
 
 
 $(document).ready(function () {
