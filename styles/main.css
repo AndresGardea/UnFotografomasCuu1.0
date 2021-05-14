@@ -169,12 +169,12 @@ ul.transition li {
     width: 20%;
 }
 
-#central{
+#central {
     z-index: 1001;
     overflow: visible;
 }
 
-.loader{
+.loader {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -183,13 +183,13 @@ ul.transition li {
     text-transform: uppercase;
 }
 
-.load-anim{
+.load-anim {
     color: var(--text-1);
     opacity: 0;
     overflow-x: visible;
 }
 
-.loading-bar{
+.loading-bar {
     transform: scaleX(0);
     margin-top: 1rem;
     width: 100%;
@@ -327,7 +327,7 @@ ul.transition li {
     height: 4rem;
 }
 
-#txt-parallax-1 , #txt-parallax-2{
+#txt-parallax-1, #txt-parallax-2 {
     opacity: 0
 }
 
@@ -350,7 +350,6 @@ ul.transition li {
         height: 100%;
         object-fit: cover;
     }
-
     .img-part {
         height: 50vh;
         width: 100%;
@@ -854,7 +853,7 @@ ul.transition li {
     z-index: 10;
 }
 
-.anim-nav{
+.anim-nav {
     opacity: 1;
 }
 
@@ -1173,14 +1172,18 @@ ul.transition li {
         margin-top: 16px;
     }
     #Fotos .img-individual {
-        min-height: 50vh;
-        max-height: 50vh;
+        height: 40vh;
         align-self: stretch;
         overflow: hidden;
     }
     .port-area blockquote {
         padding: 0rem 3rem 0.5rem 3rem;
         font-size: 1.8rem;
+    }
+    #Fotos .img-individual img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -1361,7 +1364,7 @@ ul.transition li {
 @media(max-width: 1280px) {
     .Galeria-Sesiones-1, .Galeria-Sesiones-2 {
         display: block;
-        height: 100vh;
+        height: 105vh;
     }
     .Galeria-Sesiones-1 .middle, .Galeria-Sesiones-2 .middle {
         height: 65vh;
@@ -1375,14 +1378,19 @@ ul.transition li {
         display: none;
     }
     .Galeria-Sesiones-1 .left, .Galeria-Sesiones-2 .left {
-        padding: 2rem 3rem;
-        height: 35vh;
+        padding: 2rem 1.5rem 1rem 1.5rem;
+        height: 40vh;
     }
     .Galeria-Sesiones-1 .left .content, .Galeria-Sesiones-2 .left .content {
         padding: 0;
     }
     .Galeria-Sesiones-1 .middle .MoreBtn h1, .Galeria-Sesiones-2 .middle .MoreBtn h1 {
         padding: 6rem;
+    }
+    .Galeria-Sesiones-1 .tile img, .Galeria-Sesiones-2 .tile img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -1497,7 +1505,7 @@ footer h1 {
     max-width: 100%;
 }
 
-.right .prox{
+.right .prox {
     width: 100%;
     height: 100%;
     color: var(--text-2);
@@ -1662,7 +1670,7 @@ footer h1 {
     grid-template-rows: 6rem 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
-.texto-pagina-imagen p{
+.texto-pagina-imagen p {
     text-align: justify;
     text-justify: inter-word;
 }
@@ -1853,10 +1861,9 @@ footer h1 {
     opacity: 1;
 }
 
-
 /*Lightbox*/
 
-.lightbox{
+.lightbox {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -1868,13 +1875,12 @@ footer h1 {
     align-items: center;
     flex-wrap: wrap;
     align-content: center;
-    z-index: 10;    
+    z-index: 10;
     transform: translateX(105%);
     transition: transform .4s ease-in;
-
 }
 
-.img-show{
+.img-show {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -1887,17 +1893,17 @@ footer h1 {
     transition: transform .4s .2s;
 }
 
-.img-show img{
+.img-show img {
     height: 100%;
     width: auto;
 }
 
-.copy{
+.copy {
     color: var(--text-2);
     max-width: 80%;
 }
 
-.close-btn{
+.close-btn {
     height: 4rem;
     width: 5rem;
     top: 0;
@@ -1910,7 +1916,7 @@ footer h1 {
     align-items: center;
 }
 
-.close{
+.close {
     transform: rotate(45deg);
     font-weight: 600;
     font-size: 4rem;
@@ -1918,15 +1924,13 @@ footer h1 {
     cursor: pointer;
 }
 
-
-.lightbox-move{
+.lightbox-move {
     transform: translateX(0);
 }
 
-.lightbox-show{
+.lightbox-show {
     transform: scale(1);
 }
-
 
 /*Contenido de la Pagina de las Imagenes Responsive*/
 
@@ -1943,7 +1947,6 @@ footer h1 {
         display: block;
         padding: 1rem;
     }
-
     .imagen-completa {
         grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
         grid-template-rows: 9% 9% 9% 9% 9% 9% 9% 9% 9% 19%;
@@ -1952,8 +1955,7 @@ footer h1 {
         width: 100%;
         min-height: 50vh;
     }
-
-    .size-0, .size-1, .size-2, .size-3{
+    .size-0, .size-1, .size-2, .size-3 {
         box-sizing: border-box;
         width: 90%;
         height: 70vh;
@@ -1964,4 +1966,3 @@ footer h1 {
         grid-template-rows: 50%;
     }
 }
-
