@@ -1877,7 +1877,7 @@ footer h1 {
 
 .copy{
     color: var(--text-2);
-    width: 80%;
+    max-width: 80%;
 }
 
 .close-btn{
