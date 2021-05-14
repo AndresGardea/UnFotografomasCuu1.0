@@ -1768,7 +1768,6 @@ footer h1 {
     height: 100%;
     width: 100%;
     color: var(--text-1);
-
     display: flex;
     align-content: center;
     justify-content: center;
@@ -1828,10 +1827,7 @@ footer h1 {
     opacity: 0;
     align-self: center;
     cursor: pointer;
-}
-
-.img-btn i{
-    z-index: -1;
+    z-index: 1;
 }
 
 .imagen-galeria:hover .info .img-btn {
