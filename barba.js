@@ -25,6 +25,7 @@ barba.hooks.enter(() => {
     NavSlide();
     BtnAnim();
     DarkMode();
+    Lightbox();
 });
 
 
