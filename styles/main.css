@@ -1776,7 +1776,7 @@ footer h1 {
 }
 
 .text-img {
-    width: 100%;
+    width: 60%;
     height: 100%;
     display: flex;
     align-content: center;
@@ -1881,6 +1881,7 @@ footer h1 {
 
 .copy{
     color: var(--text-2);
+    width: 80%;
 }
 
 .close-btn{
