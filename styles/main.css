@@ -50,6 +50,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -86,6 +87,11 @@ h4 {
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
+}
+h5{
+    font-family: 'Titulo';
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 time {
@@ -290,7 +296,7 @@ ul.transition li {
 /*Basico del Locomotive Scroll*/
 
 .txt-revelar {
-    opacity: 0;
+    opacity: 1; /*Devolver a 0 cuando lo vuelva a subir con locomotive*/
     transition: opacity 2s;
 }
 
@@ -350,6 +356,12 @@ ul.transition li {
         height: 100%;
         object-fit: cover;
     }
+    
+.text-part-about {
+    padding: 1rem;
+    grid-column: 2/20;
+}
+
     .img-part {
         height: 50vh;
         width: 100%;
@@ -1144,7 +1156,7 @@ ul.transition li {
     z-index: 1;
 }
 
-#Fotos .img-individual h1 {
+#Fotos .img-individual h5 {
     opacity: 0;
     transform: rotate(45deg);
     transition: .8s;
@@ -1153,7 +1165,7 @@ ul.transition li {
     padding: 10rem;
 }
 
-#Fotos .img-individual:hover h1 {
+#Fotos .img-individual:hover h5 {
     opacity: 1;
     transform: rotate(0deg);
 }
@@ -1329,7 +1341,7 @@ ul.transition li {
     z-index: 1;
 }
 
-.Galeria-Sesiones-1 .middle .MoreBtn h1, .Galeria-Sesiones-2 .middle .MoreBtn h1 {
+.Galeria-Sesiones-1 .middle .MoreBtn h5, .Galeria-Sesiones-2 .middle .MoreBtn h5 {
     opacity: 0;
     transform: rotate(45deg);
     transition: .8s;
@@ -1356,7 +1368,7 @@ ul.transition li {
     opacity: 1;
 }
 
-.Galeria-Sesiones-1 .middle:hover h1, .Galeria-Sesiones-2 .middle:hover h1 {
+.Galeria-Sesiones-1 .middle:hover h5, .Galeria-Sesiones-2 .middle:hover h5 {
     opacity: 1;
     transform: rotate(0deg);
 }
@@ -1641,11 +1653,12 @@ footer h1 {
     padding-left: 1rem;
 }
 
-#back {
+.back {
     color: var(--text-2);
     display: block;
     font-size: 1.4rem;
     padding-right: 1rem;
+    transform: translateX(0);
 }
 
 .pagina-imagen {
@@ -1930,6 +1943,19 @@ footer h1 {
 
 .lightbox-show {
     transform: scale(1);
+}
+
+.lightbox-back{
+    display: none;
+    transform: translateX(100rem);
+}
+
+@media(max-width: 1280px) {
+    .img-show{
+        overflow: hidden;
+        height: 70vh;
+        width: 80%;
+    }
 }
 
 /*Contenido de la Pagina de las Imagenes Responsive*/
