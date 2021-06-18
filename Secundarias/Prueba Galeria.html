@@ -12,8 +12,7 @@
 
     <meta name="robots" content="noindex">
 
-    <link rel='stylesheet' type='text/css' media='screen' href='../styles/main.min.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../styles/locomotive-scroll.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/main.css'>
     <link rel="shortcut icon" href="../Multimedia/Icon.ico">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -25,9 +24,14 @@
 
         gtag('config', 'G-45JTFYDDDV');
     </script>
+
+    <!-- locomotive-scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.js"></script>
+
 </head>
 
-<body data-barba="wrapper">
+<body data-barba="wrapper" id="wrapper">
 
     <ul class="transition">
         <li></li>
@@ -44,7 +48,7 @@
         <li></li>
     </ul>
 
-    <div class="wrapper-image">
+    <div data-scroll-container>
         <main data-barba="container" data-barba-namespace="Prueba">
 
             <div class="pagina-imagen">
@@ -103,8 +107,7 @@
                 <div class="imagen-completa">
                     <div class="imagen-galeria size-2">
                         <div class="img-galeria">
-                            <img class="img-g" loading="lazy"
-                                src="../Multimedia/Comprimidas (1280px)/009.webp" />
+                            <img class="img-g" loading="lazy" src="../Multimedia/Comprimidas (1280px)/009.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -124,8 +127,7 @@
                     </div>
                     <div class="imagen-galeria size-2">
                         <div class="img-galeria">
-                            <img class="img-g" loading="lazy"
-                                src="../Multimedia/Comprimidas (1280px)/010.webp" />
+                            <img class="img-g" loading="lazy" src="../Multimedia/Comprimidas (1280px)/010.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -145,8 +147,7 @@
                     </div>
                     <div class="imagen-galeria size-1">
                         <div class="img-galeria">
-                            <img class="img-g" loading="lazy"
-                                src="../Multimedia/Comprimidas (1280px)/013.webp" />
+                            <img class="img-g" loading="lazy" src="../Multimedia/Comprimidas (1280px)/013.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -166,8 +167,7 @@
                     </div>
                     <div class="imagen-galeria size-3">
                         <div class="img-galeria">
-                            <img class="img-g" loading="lazy"
-                                src="../Multimedia/Comprimidas (1280px)/015.webp" />
+                            <img class="img-g" loading="lazy" src="../Multimedia/Comprimidas (1280px)/015.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -187,8 +187,7 @@
                     </div>
                     <div class="imagen-galeria size-3">
                         <div class="img-galeria">
-                            <img class="img-g" loading="lazy"
-                                src="../Multimedia/Comprimidas (1280px)/011.webp" />
+                            <img class="img-g" loading="lazy" src="../Multimedia/Comprimidas (1280px)/011.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -208,8 +207,7 @@
                     </div>
                     <div class="imagen-galeria size-3">
                         <div class="img-galeria">
-                            <img class="img-g" loading="lazy"
-                                src="../Multimedia/Comprimidas (1280px)/012.webp" />
+                            <img class="img-g" loading="lazy" src="../Multimedia/Comprimidas (1280px)/012.webp" />
                         </div>
                         <div class="info">
                             <div class="text-img">
@@ -254,5 +252,24 @@
 <script src="../Scripts/dark.min.js"></script>
 <script src="../Scripts/lightbox.min.js"></script>
 <script src="../Scripts/nav.min.js"></script>
+
+<script>
+
+    /*Sticky locomotive
+    scroll.on('scroll', (position) => {
+        if ((position.scroll.y) > 100) {
+            document.querySelector('#nav').classList.add('sticky');
+        } else {
+            document.querySelector('#nav').classList.remove('sticky');
+        }
+    });*/
+
+    /*Sticky nav si locomotive no funciona*/
+    window.addEventListener('scroll', function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 150)
+    })
+    
+</script>
 
 </html>

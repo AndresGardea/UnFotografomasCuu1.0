@@ -12,8 +12,7 @@
 
     <meta name="robots" content="noindex">
 
-    <link rel='stylesheet' type='text/css' media='screen' href='../styles/main.min.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../styles/locomotive-scroll.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/main.css'>
     <link rel="shortcut icon" href="../Multimedia/Icon.ico">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -25,9 +24,14 @@
 
         gtag('config', 'G-45JTFYDDDV');
     </script>
+
+    <!-- locomotive-scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.js"></script>
+
 </head>
 
-<body data-barba="wrapper">
+<body data-barba="wrapper" id="wrapper">
 
     <ul class="transition">
         <li></li>
@@ -44,8 +48,8 @@
         <li></li>
     </ul>
 
-    <div class="wrapper-image">
-        <main data-barba="container" data-barba-namespace="Prueba">
+    <div data-scroll-container>
+        <main data-barba="container" data-barba-namespace="Prueba" data-scroll-container>
 
             <div class="pagina-imagen">
 
@@ -58,9 +62,12 @@
                 <div class="texto-pagina-imagen">
                     <div class="text-part-img">
                         <h2 class="anim-gallery">Preba de las Galeria GSAP+BarbaJS</h2><br>
-                        <p class="anim-gallery">En esta pagina lo que quiero hacer es mostrar la image en mayor calidady dejar que se le
+                        <p class="anim-gallery">En esta pagina lo que quiero hacer es mostrar la image en mayor calidady
+                            dejar que se le
                             pueda hacer zoom y contar un poco del contexto o algo en general hacerca de la foto.</p><br>
-                        <p class="anim-gallery">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ducimus possimus dolor
+                        <p class="anim-gallery">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                            ducimus
+                            possimus dolor
                             cumque? Distinctio sunt perferendis non. Rerum tempora similique facere enim sit dolorum
                             temporibus, molestiae eligendi obcaecati cumque dolores nobis tenetur, vel labore quia
                             aliquam ad quasi ullam fugit sunt magnam! Et itaque sed magni, recusandae magnam inventore
@@ -122,6 +129,25 @@
 <script src="../Scripts/lightbox.min.js"></script>
 <script src="../Scripts/dark.min.js"></script>
 <script src="../Scripts/nav.min.js"></script>
+
+<script>
+
+    /*Sticky locomotive
+    scroll.on('scroll', (position) => {
+        if ((position.scroll.y) > 100) {
+            document.querySelector('#nav').classList.add('sticky');
+        } else {
+            document.querySelector('#nav').classList.remove('sticky');
+        }
+    });*/
+
+    /*Sticky nav si locomotive no funciona*/
+    window.addEventListener('scroll', function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 150)
+    })
+
+</script>
 
 
 </html>

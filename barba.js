@@ -7,28 +7,6 @@ function delay(n) {
     });
 }
 
-// update the scroll after entering a page
-
-barba.hooks.beforeLeave((data) => {
-    scroll.destroy();
-});
-
-barba.hooks.after((data) => {
-    scroll.init();
-});
-
-barba.hooks.beforeEnter(() => {
-	window.scrollTo(0, 0);
-});
-
-barba.hooks.enter(() => {
-    NavSlide();
-    BtnAnim();
-    DarkMode();
-    Lightbox();
-});
-
-
 /*Animaciones*/
 
 function firsVisit() {
@@ -126,3 +104,31 @@ $(function () {
     });
 
 });
+
+// update the scroll after entering a page
+
+barba.hooks.beforeEnter(() => {
+    window.scrollTo(0, 0);
+});
+
+barba.hooks.after(() => {
+    scroll.update();
+});
+
+barba.hooks.afterEnter(() => {
+    scroll.init();
+});
+
+barba.hooks.afterLeave(() => {
+    scroll.destroy();
+});
+
+barba.hooks.enter(() => {
+    NavSlide();
+    BtnAnim();
+    DarkMode();
+    Lightbox();
+    scroll();
+    Sticky();
+});
+

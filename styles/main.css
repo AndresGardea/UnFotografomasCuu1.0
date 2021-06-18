@@ -55,6 +55,7 @@ html {
 
 body {
     background: var(--background-1);
+	overflow-x: hidden;
 }
 
 #logo, #logo2 {
@@ -1878,7 +1879,7 @@ footer h1 {
 
 .lightbox {
     position: fixed;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     top: 0;
     left: 0;
