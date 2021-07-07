@@ -130,5 +130,6 @@ barba.hooks.enter(() => {
     Lightbox();
     scroll();
     Sticky();
+    addZoom();
 });
 

@@ -1903,6 +1903,8 @@ footer h1 {
     overflow: hidden;
     height: 80vh;
     width: 80%;
+    background-position: center;
+    background-size: cover;
     transform: scale(0);
     transition: transform .4s .2s;
 }
@@ -1910,6 +1912,7 @@ footer h1 {
 .img-show img {
     height: 100%;
     width: auto;
+
 }
 
 .copy {
