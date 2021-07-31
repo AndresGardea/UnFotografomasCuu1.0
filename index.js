@@ -1,15 +1,43 @@
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-        inertia: 0.75,
-        getDirection: true
-    });
+const scroller = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    inertia: 0.80,
+})
 
-    
-
+gsap.registerPlugin(ScrollTrigger)
 
 
+scroller.on('scroll', ScrollTrigger.update)
+
+ScrollTrigger.scrollerProxy(
+    '.container', {
+        scrollTop(value) {
+            return arguments.length ?
+            scroller.scrollTo(value, 0, 0) :
+            scroller.scroll.instance.scroll.y
+        },
+        getBoundingClientRect() {
+            return {
+                left: 0, top: 0, 
+                width: window.innerWidth,
+                height: window.innerHeight
+            }
+        }
+    }
+)
 
 
+ScrollTrigger.create({
+    trigger: '.image-mask',
+    scroller: '.container',
+    start: 'top+=30% 50%',
+    end: 'bottom-=40% 50%',
+    animation: gsap.to('.image-mask', {backgroundSize: '125%'}),
+    scrub: 2,
+})
 
 
+ScrollTrigger.addEventListener('refresh', () => scroller.update())
+
+
+ScrollTrigger.refresh()

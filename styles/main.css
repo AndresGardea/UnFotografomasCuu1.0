@@ -55,7 +55,7 @@ html {
 
 body {
     background: var(--background-1);
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 #logo, #logo2 {
@@ -89,7 +89,8 @@ h4 {
     font-weight: 500;
     text-decoration: none;
 }
-h5{
+
+h5 {
     font-family: 'Titulo';
     font-size: 2rem;
     font-weight: 500;
@@ -297,7 +298,8 @@ ul.transition li {
 /*Basico del Locomotive Scroll*/
 
 .txt-revelar {
-    opacity: 1; /*Devolver a 0 cuando lo vuelva a subir con locomotive*/
+    opacity: 1;
+    /*Devolver a 0 cuando lo vuelva a subir con locomotive*/
     transition: opacity 2s;
 }
 
@@ -357,12 +359,10 @@ ul.transition li {
         height: 100%;
         object-fit: cover;
     }
-    
-.text-part-about {
-    padding: 1rem;
-    grid-column: 2/20;
-}
-
+    .text-part-about {
+        padding: 1rem;
+        grid-column: 2/20;
+    }
     .img-part {
         height: 50vh;
         width: 100%;
@@ -796,15 +796,15 @@ ul.transition li {
 
 .NavBar {
     position: fixed;
+    height: 5.5rem;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 5;
     color: var(--text-1);
-    height: 5.5rem;
     transition: 0.6s;
 }
 
@@ -1679,6 +1679,7 @@ footer h1 {
     background: var(--background-1);
     position: relative;
     width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     grid-template-rows: 6rem 10% 10% 10% 10% 10% 10% 10% 10% 10%;
@@ -1695,8 +1696,6 @@ footer h1 {
     position: relative;
     width: 100%;
     height: auto;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -1708,6 +1707,7 @@ footer h1 {
     grid-column: 2/10;
     grid-row: 2/10;
     padding: 1rem;
+    width: 100%;
 }
 
 .cta {
@@ -1879,30 +1879,36 @@ footer h1 {
 
 .lightbox {
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     background: var(--clear);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
     z-index: 10;
     transform: translateX(105%);
     transition: transform .4s ease-in;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    flex-wrap: wrap;
+    align-content: center;
 }
 
-.img-show {
+.lightbox-content {
+    width: 100%;
+    height: 100vh;  
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    flex-direction: column;
+}
+
+.img-show {
     height: 80vh;
-    width: 80%;
+    width: auto;
+    overflow: hidden;
     background-position: center;
     background-size: cover;
     transform: scale(0);
@@ -1912,7 +1918,6 @@ footer h1 {
 .img-show img {
     height: 100%;
     width: auto;
-
 }
 
 .copy {
@@ -1949,13 +1954,13 @@ footer h1 {
     transform: scale(1);
 }
 
-.lightbox-back{
+.lightbox-back {
     display: none;
     transform: translateX(100rem);
 }
 
 @media(max-width: 1280px) {
-    .img-show{
+    .img-show {
         overflow: hidden;
         height: 70vh;
         width: 80%;
@@ -1995,4 +2000,31 @@ footer h1 {
         grid-template-columns: 50%;
         grid-template-rows: 50%;
     }
+}
+
+/*Mapa de la zona del texto*/
+
+.img-text {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 40vh;
+    display: grid;
+    padding: 0 1rem;
+}
+
+.img-text .image-mask {
+    width: 100%;
+    height: 100%;
+    background: url('../Multimedia/Poster\ 1.webp');
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 90%;
+    background-size: 100%;
+}
+
+.img-text .image-mask img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
