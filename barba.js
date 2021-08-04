@@ -112,15 +112,15 @@ barba.hooks.beforeEnter(() => {
 });
 
 barba.hooks.after(() => {
-    scroller.update();
+    scroll.update();
 });
 
 barba.hooks.afterEnter(() => {
-    scroller.init();
+    scroll.init();
 });
 
 barba.hooks.afterLeave(() => {
-    scroller.destroy();
+    scroll.destroy();
 });
 
 barba.hooks.enter(() => {

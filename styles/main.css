@@ -792,6 +792,11 @@ ul.transition li {
     width: 100%;
 }
 
+
+
+
+
+
 /*-----Barra de Navegacion-----*/
 
 .NavBar {
@@ -1879,7 +1884,7 @@ footer h1 {
 
 .lightbox {
     position: fixed;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     top: 0;
     left: 0;
@@ -1887,14 +1892,12 @@ footer h1 {
     z-index: 10;
     transform: translateX(105%);
     transition: transform .4s ease-in;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;  
-    flex-wrap: wrap;
-    align-content: center;
 }
 
 .lightbox-content {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;  
     display: flex;
@@ -2019,8 +2022,7 @@ footer h1 {
     background: url('../Multimedia/Poster\ 1.webp');
     background-size: cover;
     background-position-x: 50%;
-    background-position-y: 90%;
-    background-size: 100%;
+    background-position-y: 50%;
 }
 
 .img-text .image-mask img {
