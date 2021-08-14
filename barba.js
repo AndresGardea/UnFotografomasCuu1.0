@@ -112,15 +112,15 @@ barba.hooks.beforeEnter(() => {
 });
 
 barba.hooks.after(() => {
-    scroll.update();
+    scroller.update();
 });
 
 barba.hooks.afterEnter(() => {
-    scroll.init();
+    scroller.init();
 });
 
 barba.hooks.afterLeave(() => {
-    scroll.destroy();
+    scroller.destroy();
 });
 
 barba.hooks.enter(() => {
@@ -128,7 +128,7 @@ barba.hooks.enter(() => {
     BtnAnim();
     DarkMode();
     Lightbox();
-    scroll();
+    scroller();
     Sticky();
     addZoom();
 });
