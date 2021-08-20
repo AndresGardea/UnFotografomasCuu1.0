@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html Prueba.html",
+    "dev": "parcel index.html",
     "dev2": "parcel *.html",
     "dev3": "parcel watch index.html Prueba.html",
     "build": "parcel build index.html",
