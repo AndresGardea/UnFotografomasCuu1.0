@@ -11,21 +11,25 @@
 @font-face {
     font-family: Titulo;
     src: url(../Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+    font-display: block;
 }
 
 @font-face {
     font-family: SubTitulo;
     src: url(../Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+    font-display: block;
 }
 
 @font-face {
     font-family: Texto;
     src: url(../Fonts/Lato/Lato-Light.ttf);
+    font-display: block;
 }
 
 @font-face {
     font-family: Links;
     src: url(../Fonts/Lato/Lato-Regular.ttf);
+    font-display: block;
 }
 
 :root {

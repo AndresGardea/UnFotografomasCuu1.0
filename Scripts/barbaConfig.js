@@ -115,6 +115,7 @@ $(function () {
 
 barba.hooks.beforeEnter(() => {
     window.scrollTo(0, 0);
+    loco();
 });
 
 barba.hooks.enter(() => {
@@ -123,6 +124,5 @@ barba.hooks.enter(() => {
     DarkMode();
     Lightbox();
     Sticky();
-    addZoom();
-    loco();
+    LightboxZoom();
 });

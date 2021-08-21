@@ -1,8 +1,8 @@
-function loco() {
+const loco = () => {
     scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
-        mobile: {
+        smartphone: {
             smooth: true
         },
         tablet: {
@@ -58,6 +58,7 @@ scroll = new LocomotiveScroll({
 
     ScrollTrigger.refresh()
 
-*/$(document).ready(function () {
+*/
+$(document).ready(function () {
     loco(loco)
 });
