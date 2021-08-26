@@ -13,7 +13,6 @@ const loco = () => {
 };
 
 /*
-
     let currentScrollContainer = scrollContainer.querySelector('[data-scroll-container]')
 scroll = new LocomotiveScroll({
     el: currentScrollContainer,
@@ -57,8 +56,8 @@ scroll = new LocomotiveScroll({
 
 
     ScrollTrigger.refresh()
-
 */
+
 $(document).ready(function () {
     loco(loco)
 });

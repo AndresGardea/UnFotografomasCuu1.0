@@ -9,9 +9,8 @@ function delay(n) {
 
 function firstVisit() {
     var tl = gsap.timeline();
-
-    tl.to('ul.transition li', { duration: 0, scaleY: 1, transformOrigin: "bottom left" });    
-    tl.to('.contenido' , {duration: 0, opacity: 1});
+    tl.to('ul.transition li', { duration: 0, scaleY: 1, transformOrigin: "bottom left" });
+    tl.to('.contenido', { duration: 0, opacity: 1 });
     tl.to('.load-anim', { duration: .9, opacity: 1 });
     tl.to('.loading-bar', { duration: 1, scaleX: 1, transformOrigin: "left" });
     tl.to('ul.transition li', { duration: .6, scaleY: 0, transformOrigin: "bottom left", stagger: .1, delay: .1, });
@@ -65,64 +64,58 @@ function secondarypageout() {
     tl.to('.imagen-completa', { duration: .9, opacity: 0, delay: -1.4 });
 }
 
-barba.hooks.after(() => {
-    scroll.update();
-});
+let loco;
 
-$(function () {
-    barba.init({
+barba.init({
 
-        sync: true,
+    sync: true,
 
-        transitions: [
-            {
+    transitions: [
+        {
 
-                async leave(data) {
+            async leave(data) {
 
-                    const done = this.async();
+                const done = this.async();
 
-                    pageout();
+                pageout();
 
-                    secondarypageout();
+                secondarypageout();
 
 
-                    setTimeout(function () {
-                        pageTransition();
-                    }, 200);
+                setTimeout(function () {
+                    pageTransition();
+                }, 200);
 
-                    await delay(1700);
-                    done();
+                await delay(1700);
+                done();
 
-                },
+            },
 
-                async once ()  {
-                    firstVisit();
-                    scroll();
-                },
+            async once() {
+                firstVisit();
+                scroll();
+            },
 
-                async enter () {
-                    principalAnimation();
-                    secondaryAnimation();
-                },
+            async enter() {
+                principalAnimation();
+                secondaryAnimation();
+            },
 
-                async beforeEnter () {
-                    scroll.setScroll(0, 0);
-                }
+            async beforeEnter() {
+                scroll.setScroll(0, 0);
+            },
+
+            async after() {
+                scroll.update();
             }
-        ]
-    });
+        }
+    ]
 });
+
+
 
 barba.hooks.beforeEnter(() => {
     window.scrollTo(0, 0);
-    loco();
 });
 
-barba.hooks.enter(() => {
-    NavSlide();
-    BtnAnim();
-    DarkMode();
-    Lightbox();
-    Sticky();
-    LightboxZoom();
-});
+
